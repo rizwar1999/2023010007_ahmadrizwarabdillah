@@ -21,3 +21,4 @@ function updateCart() {
 
     cartTotalElement.textContent = cartTotal;
 }
+

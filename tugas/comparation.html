@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perbandingan Operator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    h2 {
+        margin-bottom: 10px;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<h2>Perbandingan Operator</h2>
+
+<table>
+    <tr>
+        <th>Operator</th>
+        <th>Contoh</th>
+        <th>Hasil</th>
+    </tr>
+    <tr>
+        <td>Equal (==)</td>
+        <td>5 == 5</td>
+        <td id="equal"></td>
+    </tr>
+    <tr>
+        <td>Not Equal (!=)</td>
+        <td>5 != 3</td>
+        <td id="notEqual"></td>
+    </tr>
+    <tr>
+        <td>Strict Equal (===)</td>
+        <td>5 === '5'</td>
+        <td id="strictEqual"></td>
+    </tr>
+    <tr>
+        <td>Strict Not Equal (!==)</td>
+        <td>5 !== '5'</td>
+        <td id="strictNotEqual"></td>
+    </tr>
+    <tr>
+        <td>Greater Than (>)</td>
+        <td>5 > 3</td>
+        <td id="greaterThan"></td>
+    </tr>
+    <tr>
+        <td>Less Than (<)</td>
+        <td>3 < 5</td>
+        <td id="lessThan"></td>
+    </tr>
+    <tr>
+        <td>Greater Than or Equal To (>=)</td>
+        <td>5 >= 5</td>
+        <td id="greaterThanOrEqual"></td>
+    </tr>
+    <tr>
+        <td>Less Than or Equal To (<=)</td>
+        <td>3 <= 5</td>
+        <td id="lessThanOrEqual"></td>
+    </tr>
+</table>
+
+<script>
+    // Menampilkan hasil perbandingan
+    document.getElementById("equal").innerText = 5 == 5;
+    document.getElementById("notEqual").innerText = 5 != 3;
+    document.getElementById("strictEqual").innerText = 5 === '5';
+    document.getElementById("strictNotEqual").innerText = 5 !== '5';
+    document.getElementById("greaterThan").innerText = 5 > 3;
+    document.getElementById("lessThan").innerText = 3 < 5;
+    document.getElementById("greaterThanOrEqual").innerText = 5 >= 5;
+    document.getElementById("lessThanOrEqual").innerText = 3 <= 5;
+</script>
+
+</body>
+</html>

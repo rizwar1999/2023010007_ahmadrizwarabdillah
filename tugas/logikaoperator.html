@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logical Operator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    h2 {
+        margin-bottom: 10px;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<h2>Logical Operator</h2>
+
+<table>
+    <tr>
+        <th>Operator</th>
+        <th>Contoh</th>
+        <th>Hasil</th>
+    </tr>
+    <tr>
+        <td>Logical AND (&&)</td>
+        <td>(5 > 3) && (3 < 10)</td>
+        <td id="logicalAnd"></td>
+    </tr>
+    <tr>
+        <td>Logical OR (||)</td>
+        <td>(5 > 3) || (3 > 10)</td>
+        <td id="logicalOr"></td>
+    </tr>
+    <tr>
+        <td>Logical NOT (!)</td>
+        <td>!(5 > 3)</td>
+        <td id="logicalNot"></td>
+    </tr>
+</table>
+
+<script>
+    // Menampilkan hasil operator logika
+    document.getElementById("logicalAnd").innerText = (5 > 3) && (3 < 10);
+    document.getElementById("logicalOr").innerText = (5 > 3) || (3 > 10);
+    document.getElementById("logicalNot").innerText = !(5 > 3);
+</script>
+
+</body>
+</html>
