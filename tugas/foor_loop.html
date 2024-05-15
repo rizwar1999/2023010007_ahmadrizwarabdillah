@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menampilkan Nama 50 Kali</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nama Anda sebanyak 50 kali</h1>
+    <button onclick="displayNames()">Tampilkan Nama</button>
+    <div id="result"></div>
+
+    <script>
+        function displayNames() {
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ""; // Membersihkan konten sebelumnya
+            let name = "Nama Anda"; // Ganti dengan nama Anda
+
+            for (let i = 50; i >= 1; i--) {
+                let para = document.createElement('p');
+                para.textContent = `${i}. ${name}`;
+                resultDiv.appendChild(para);
+            }
+        }
+    </script>
+</body>
+</html>

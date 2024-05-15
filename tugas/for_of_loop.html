@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Nama Teman Sekelas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #006400;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daftar Nama Teman Sekelas</h1>
+    <ul id="classmatesList"></ul>
+
+    <script>
+        // Daftar nama teman sekelas
+        const classmates = [
+            "adam",
+            "dana",
+            "sambo",
+            "bagos",
+            "pirin",
+        ];
+
+        function displayClassmates() {
+            const listElement = document.getElementById('classmatesList');
+            listElement.innerHTML = ""; // Membersihkan konten sebelumnya
+
+            classmates.forEach((name, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${index + 1}. ${name}`;
+                listElement.appendChild(listItem);
+            });
+        }
+
+        // Memanggil fungsi untuk menampilkan daftar nama teman sekelas
+        displayClassmates();
+    </script>
+</body>
+</html>

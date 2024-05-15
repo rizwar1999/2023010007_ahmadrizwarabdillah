@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>truthy atau falsy</title>
+</head>
+<body>
+<h1>truthy atau falsy</h1>
+
+<script>
+    function cektruthyfalsy(nilai){
+        if (nilai){
+            return "truthy";
+        }else{
+            return "falsy";
+        }
+    }
+//contoh pengunaan
+var contohnilai1=10;
+var contohnilai2='';
+
+document.write("nilai" + contohnilai1 + "adalah"  + cektruthyfalsy(contohnilai1)+"<br>");
+document.write("nilai" + contohnilai2 + "adalah"  + cektruthyfalsy(contohnilai2)+"<br>");
+
+</script>
+
+</body>
+</html>

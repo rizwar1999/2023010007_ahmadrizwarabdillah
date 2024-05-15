@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Anda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #006400;
+        }
+    </style>
+</head>
+<body>
+    <h1>Profil Anda</h1>
+    <ul id="profileList"></ul>
+
+    <script>
+        const biodata = {
+            firstName: "rizwar",
+            lastName: "abdi",
+            age: 30,
+            city: "jepara"
+        };
+
+        const prodi = {
+            programStudy: "rekayasa perangkat lunak",
+            year: 1
+        };
+
+        // Menampilkan profil Anda
+        const profileList = document.getElementById('profileList');
+        for (const key in biodata) {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${key}: ${biodata[key]}`;
+            profileList.appendChild(listItem);
+        }
+
+        for (const key in prodi) {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${key}: ${prodi[key]}`;
+            profileList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

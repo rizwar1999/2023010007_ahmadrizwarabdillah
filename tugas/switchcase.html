@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Switch Case</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        label, select, button {
+            margin: 5px 0;
+            display: block;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #006400;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pilih Hari dalam Seminggu</h1>
+    <label for="daySelect">Pilih hari:</label>
+    <select id="daySelect">
+        <option value="1">Senin</option>
+        <option value="2">Selasa</option>
+        <option value="3">Rabu</option>
+        <option value="4">Kamis</option>
+        <option value="5">Jumat</option>
+        <option value="6">Sabtu</option>
+        <option value="7">Minggu</option>
+    </select>
+    <button onclick="displayDayMessage()">Tampilkan Pesan</button>
+    <p id="result"></p>
+
+    <script>
+        function displayDayMessage() {
+            let day = parseInt(document.getElementById('daySelect').value);
+            let message;
+
+            switch (day) {
+                case 1:
+                    message = "Hari Senin: Awal yang baru!";
+                    break;
+                case 2:
+                    message = "Hari Selasa: Lanjutkan kerja kerasmu!";
+                    break;
+                case 3:
+                    message = "Hari Rabu: Pertahankan semangat!";
+                    break;
+                case 4:
+                    message = "Hari Kamis: Hampir sampai di akhir minggu!";
+                    break;
+                case 5:
+                    message = "Hari Jumat: Hari terakhir kerja, semangat!";
+                    break;
+                case 6:
+                    message = "Hari Sabtu: Saatnya bersantai!";
+                    break;
+                case 7:
+                    message = "Hari Minggu: Istirahat dan bersiap untuk minggu depan!";
+                    break;
+                default:
+                    message = "Pilihan tidak valid!";
+            }
+
+            document.getElementById('result').innerHTML = message;
+        }
+    </script>
+</body>
+</html>
