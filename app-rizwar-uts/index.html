@@ -3,12 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nama mahasiswa</title>
-    
+    <title>Input Nilai Mahasiswa</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Prodi rekayasa perangkat lunak</h1>
-    </body>
-    </html>
-    
+    <h1>Input Nilai Mahasiswa</h1>
+    <form id="nilaiForm">
+        <label for="nim">NIM:</label>
+        <input type="text" id="nim" name="nim" required><br><br>
+
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="mataKuliah">Mata Kuliah:</label>
+        <select id="mataKuliah" name="mataKuliah">
+            <option value="pendidikan pancasila">pendidikan pancasila</option>
+            <option value="Arsitektur komputer">Arsitektur komputer</option>
+            <option value="Pemprograman komputer 2">Pemprograman komputer 2</option>
+            <option value="Praktik pemprograman komputer 2">Praktik pemprograman komputer 2</option>
+            <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+            <option value="Diskrit1">Diskrit1</option>
+            <option value="Kalkulus2">Kalkulus2</option>
+            <option value="Struktur Data dan Algoritma">Struktur Data dan Algoritma</option>
+            <option value="Sistem operasi">Sistem operasi</option>
+            <option value="Desain perangkat lunak">Desain perangkat lunak</option>
+        </select><br><br>
+
+        <label for="nilaiAkhir">Nilai Akhir:</label>
+        <input type="number" id="nilaiAkhir" name="nilaiAkhir" min="0" max="100" required><br><br>
+
+        <button type="button" id="tampilBtn">TAMPIL</button>
+        <button type="reset" id="resetBtn">RESET</button>
+    </form>
+
+    <div id="output" class="hidden">
+        <h2>Hasil Input Nilai</h2>
+        <p><strong>NIM:</strong> <span id="outputNim"></span></p>
+        <p><strong>Nama:</strong> <span id="outputNama"></span></p>
+        <p><strong>Mata Kuliah:</strong> <span id="outputMataKuliah"></span></p>
+        <p><strong>Nilai Akhir:</strong> <span id="outputNilaiAkhir"></span></p>
+        <p><strong>Nilai Huruf:</strong> <span id="outputNilaiHuruf"></span></p>
+        <p><strong>Indeks Nilai:</strong> <span id="outputIndeksNilai"></span></p>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
